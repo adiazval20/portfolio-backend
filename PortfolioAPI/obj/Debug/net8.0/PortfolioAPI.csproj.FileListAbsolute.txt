@@ -54,3 +54,4 @@
 /Users/andydiazvaldiviezo/Development/portfolio/backend/PortfolioAPI/obj/Debug/net8.0/PortfolioAPI.pdb
 /Users/andydiazvaldiviezo/Development/portfolio/backend/PortfolioAPI/obj/Debug/net8.0/PortfolioAPI.genruntimeconfig.cache
 /Users/andydiazvaldiviezo/Development/portfolio/backend/PortfolioAPI/obj/Debug/net8.0/ref/PortfolioAPI.dll
+/Users/andydiazvaldiviezo/Development/portfolio/backend/PortfolioAPI/obj/Debug/net8.0/PortfolioAPI.sourcelink.json

@@ -13,7 +13,7 @@ public class ChatController
     private readonly ILogger<ChatController> _logger;
     private readonly IChatClient _chatClient;
 
-    private readonly string _endPoint = "http://localhost:5101/sse";
+    private readonly string _endPoint = "https://localhost:7262/sse";
 
     public ChatController(ILogger<ChatController> logger, IChatClient chatClient)
     {

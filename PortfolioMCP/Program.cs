@@ -7,4 +7,4 @@ var app = builder.Build();
 
 app.MapMcp();
 
-app.Run("http://localhost:5101");
+app.Run();
