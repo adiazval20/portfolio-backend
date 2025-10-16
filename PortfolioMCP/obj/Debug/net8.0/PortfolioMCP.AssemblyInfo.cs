@@ -10,10 +10,11 @@
 using System;
 using System.Reflection;
 
+[assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("d6eb5508-e644-44b5-bd7a-56bb62bc0904")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("PortfolioMCP")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cec9cb244af3f57c4d70a970023691df3fde46d4")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c29348a3bed29655a23b30d44fb74955b79a1bc5")]
 [assembly: System.Reflection.AssemblyProductAttribute("PortfolioMCP")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PortfolioMCP")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -67,6 +67,14 @@
               "target": "Package",
               "version": "[0.3.0-preview.4, )"
             },
+            "PdfPig": {
+              "target": "Package",
+              "version": "[0.1.11, )"
+            },
+            "Qdrant.Client": {
+              "target": "Package",
+              "version": "[1.15.1, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.6.2, )"

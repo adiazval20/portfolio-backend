@@ -13,6 +13,8 @@
     <PackageReference Include="Microsoft.Extensions.AI" Version="9.8.0" />
     <PackageReference Include="Microsoft.Extensions.AI.OpenAI" Version="9.8.0-preview.1.25412.6" />
     <PackageReference Include="ModelContextProtocol" Version="0.3.0-preview.4" />
+    <PackageReference Include="PdfPig" Version="0.1.11" />
+    <PackageReference Include="Qdrant.Client" Version="1.15.1" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
   </ItemGroup>
 

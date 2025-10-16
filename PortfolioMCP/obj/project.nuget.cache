@@ -1,9 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "oPKFbGuF0G4=",
+  "dgSpecHash": "HDd0ekBENdg=",
   "success": true,
   "projectFilePath": "/Users/andydiazvaldiviezo/Development/portfolio/backend/PortfolioMCP/PortfolioMCP.csproj",
   "expectedPackageFiles": [
+    "/Users/andydiazvaldiviezo/.nuget/packages/google.protobuf/3.31.0/google.protobuf.3.31.0.nupkg.sha512",
+    "/Users/andydiazvaldiviezo/.nuget/packages/grpc.core.api/2.71.0/grpc.core.api.2.71.0.nupkg.sha512",
+    "/Users/andydiazvaldiviezo/.nuget/packages/grpc.net.client/2.71.0/grpc.net.client.2.71.0.nupkg.sha512",
+    "/Users/andydiazvaldiviezo/.nuget/packages/grpc.net.common/2.71.0/grpc.net.common.2.71.0.nupkg.sha512",
     "/Users/andydiazvaldiviezo/.nuget/packages/microsoft.aspnetcore.openapi/8.0.11/microsoft.aspnetcore.openapi.8.0.11.nupkg.sha512",
     "/Users/andydiazvaldiviezo/.nuget/packages/microsoft.extensions.ai.abstractions/9.7.1/microsoft.extensions.ai.abstractions.9.7.1.nupkg.sha512",
     "/Users/andydiazvaldiviezo/.nuget/packages/microsoft.extensions.apidescription.server/6.0.5/microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
@@ -19,11 +23,16 @@
     "/Users/andydiazvaldiviezo/.nuget/packages/modelcontextprotocol/0.3.0-preview.4/modelcontextprotocol.0.3.0-preview.4.nupkg.sha512",
     "/Users/andydiazvaldiviezo/.nuget/packages/modelcontextprotocol.aspnetcore/0.3.0-preview.4/modelcontextprotocol.aspnetcore.0.3.0-preview.4.nupkg.sha512",
     "/Users/andydiazvaldiviezo/.nuget/packages/modelcontextprotocol.core/0.3.0-preview.4/modelcontextprotocol.core.0.3.0-preview.4.nupkg.sha512",
+    "/Users/andydiazvaldiviezo/.nuget/packages/openai/2.5.0/openai.2.5.0.nupkg.sha512",
+    "/Users/andydiazvaldiviezo/.nuget/packages/pdfpig/0.1.11/pdfpig.0.1.11.nupkg.sha512",
+    "/Users/andydiazvaldiviezo/.nuget/packages/qdrant.client/1.15.1/qdrant.client.1.15.1.nupkg.sha512",
     "/Users/andydiazvaldiviezo/.nuget/packages/swashbuckle.aspnetcore/6.6.2/swashbuckle.aspnetcore.6.6.2.nupkg.sha512",
     "/Users/andydiazvaldiviezo/.nuget/packages/swashbuckle.aspnetcore.swagger/6.6.2/swashbuckle.aspnetcore.swagger.6.6.2.nupkg.sha512",
     "/Users/andydiazvaldiviezo/.nuget/packages/swashbuckle.aspnetcore.swaggergen/6.6.2/swashbuckle.aspnetcore.swaggergen.6.6.2.nupkg.sha512",
     "/Users/andydiazvaldiviezo/.nuget/packages/swashbuckle.aspnetcore.swaggerui/6.6.2/swashbuckle.aspnetcore.swaggerui.6.6.2.nupkg.sha512",
+    "/Users/andydiazvaldiviezo/.nuget/packages/system.clientmodel/1.6.1/system.clientmodel.1.6.1.nupkg.sha512",
     "/Users/andydiazvaldiviezo/.nuget/packages/system.io.pipelines/8.0.0/system.io.pipelines.8.0.0.nupkg.sha512",
+    "/Users/andydiazvaldiviezo/.nuget/packages/system.memory.data/8.0.1/system.memory.data.8.0.1.nupkg.sha512",
     "/Users/andydiazvaldiviezo/.nuget/packages/system.net.serversentevents/10.0.0-preview.4.25258.110/system.net.serversentevents.10.0.0-preview.4.25258.110.nupkg.sha512"
   ],
   "logs": []
