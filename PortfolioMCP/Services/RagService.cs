@@ -46,7 +46,7 @@ public sealed class RagService : IRagService
         }
         var context = sb.ToString();
 
-        var completion = await chat.CompleteChatAsync($"You are a helpful assistant. Answer strictly from the provided context. If the answer isn’t in the context, say you don’t know. Question: {question}\n\nContext:\n{context}\n\nReturn a concise answer.");
+        var completion = await chat.CompleteChatAsync($"You are a helpful assistant. Answer strictly from the provided context. If the answer isn’t in the context, say you don’t know and politely ask to try another question. Question: {question}\n\nContext:\n{context}\n\nReturn a concise answer.");
         var answer = completion.Value.Content[0].Text;
 
         return new Answer(answer);

@@ -40,4 +40,4 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 app.MapControllers();
 
-app.Run("http://localhost:5170");
+app.Run();

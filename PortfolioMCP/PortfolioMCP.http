@@ -1,6 +1,0 @@
-@PortfolioMCP_HostAddress = http://localhost:5207
-
-GET {{PortfolioMCP_HostAddress}}/weatherforecast/
-Accept: application/json
-
-###

@@ -34,6 +34,4 @@ public class FilesController(ILogger<FilesController> _logger, IRagService _rag)
 
         return Ok(new AnswerDTO (res.Text, body.Question));
     }
-
-    
 }
