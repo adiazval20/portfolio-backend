@@ -6,11 +6,11 @@ namespace PortfolioAPI.Controllers;
 
 [ApiController]
 [Route("[controller]")]
-public class AboutController
+public class AboutController : ControllerBase
 {
     [HttpGet("")]
     public async Task<IActionResult> GetTools()
     {
-        return new OkResult();
+        return Ok("Hello, I am Andy!");
     } 
 }

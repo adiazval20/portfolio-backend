@@ -13,10 +13,11 @@ public class ChatController
     private readonly ILogger<ChatController> _logger;
     private readonly IChatClient _chatClient;
 
-    private readonly string _endPoint = "https://localhost:7262/sse";
+    private readonly string _endPoint = "https://localhost:7263/sse";
 
-    public ChatController(ILogger<ChatController> logger, IChatClient chatClient)
+    public ChatController(IConfiguration config, ILogger<ChatController> logger, IChatClient chatClient)
     {
+        _endPoint = config["McpEndpoint"] ?? throw new Exception("The MCP Endpoint shouldn't be null");
         _logger = logger;
         _chatClient = chatClient;
     }
