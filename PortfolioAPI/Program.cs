@@ -1,8 +1,12 @@
+using Azure;
 using Azure.AI.OpenAI;
 using Azure.Identity;
 using Microsoft.Extensions.AI;
 
 var builder = WebApplication.CreateBuilder(args);
+var config = builder.Configuration;
+var azureAiUrl = config["AzureAI:Url"] ?? "";
+var azureAiKey = config["AzureAI:Key"] ?? "";
 
 // Add services to the container.
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
@@ -21,8 +25,8 @@ builder.Services.AddCors(options =>
 
 builder.Services.AddChatClient(services => new ChatClientBuilder(
     new AzureOpenAIClient(
-        new Uri("https://azure-ai-foundry-adv-1.cognitiveservices.azure.com/"),
-        new DefaultAzureCredential()
+        new Uri(azureAiUrl),
+        new AzureKeyCredential(azureAiKey)
     ).GetChatClient("gpt-4.1").AsIChatClient()
 )
 .UseFunctionInvocation()
