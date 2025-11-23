@@ -8,16 +8,16 @@ namespace PortfolioAPI.Controllers;
 [Route("[controller]")]
 public class AboutController : ControllerBase
 {
-    private readonly string _endPoint;
+    private readonly string _parameterForTest;
 
     public AboutController(IConfiguration config)
     {
-        _endPoint = config["McpEndpoint"] ?? "WTF";
+        _parameterForTest = config["AllowedOrigin"] ?? "WTF";
     }
 
     [HttpGet("")]
-    public async Task<IActionResult> GetTools()
+    public async Task<IActionResult> Index()
     {
-        return Ok(_endPoint);
+        return Ok(_parameterForTest);
     } 
 }

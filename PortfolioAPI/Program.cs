@@ -7,6 +7,7 @@ var builder = WebApplication.CreateBuilder(args);
 var config = builder.Configuration;
 var azureAiUrl = config["AzureAI:Url"] ?? "";
 var azureAiKey = config["AzureAI:Key"] ?? "";
+var allowedOrigin = config["AllowedOrigin"] ?? "";
 
 // Add services to the container.
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
@@ -17,7 +18,7 @@ builder.Services.AddCors(options =>
 {
     options.AddDefaultPolicy(builder =>
     {
-        builder.WithOrigins("http://localhost:3000")
+        builder.WithOrigins(allowedOrigin)
             .AllowAnyHeader()
             .AllowAnyMethod();
     });
