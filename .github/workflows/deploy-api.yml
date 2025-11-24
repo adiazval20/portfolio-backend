@@ -28,7 +28,7 @@ jobs:
 
       - name: Generate deployment package
         run: |
-          cd publish
+          cd publish/api
           zip -r ../deployment-package.zip *
           cd ..
 
