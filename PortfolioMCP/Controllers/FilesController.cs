@@ -27,6 +27,8 @@ public class FilesController(ILogger<FilesController> _logger, IRagService _rag)
     [HttpPost("answer")]
     public async Task<IActionResult> Answer([FromBody] QuestionRequestDTO body, CancellationToken ct)
     {
+        _logger.LogInformation($"Asking: {body.Question}");
+        
         if (string.IsNullOrWhiteSpace(body.Question))
             return BadRequest("Missing 'question'.");
 
