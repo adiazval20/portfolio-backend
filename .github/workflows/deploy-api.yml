@@ -41,4 +41,4 @@ jobs:
           environment_name: portfolio-api-env
           version_label: api-${{ github.sha }}
           region: us-east-2
-          deployment_package: deployment-package.zip
+          deployment_package: deployment-package-api.zip
