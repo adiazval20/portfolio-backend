@@ -27,10 +27,7 @@ jobs:
         run: dotnet publish -c Release -o ./publish
 
       - name: Generate deployment package
-        run: |
-          cd publish
-          zip -r ../deployment-package.zip .
-          cd ..
+        run: zip -r deployment-package.zip ./publish/*
 
       - name: Deploy to Elastic Beanstalk
         uses: einaregilsson/beanstalk-deploy@v21
