@@ -18,13 +18,13 @@ jobs:
           dotnet-version: '8.0.x' # Change to your .NET version
 
       - name: Restore dependencies
-        run: dotnet restore
+        run: dotnet restore ./PortfolioMCP/PortfolioMCP.csproj
 
       - name: Build
-        run: dotnet build --configuration Release
+        run: dotnet build ./PortfolioMCP/PortfolioMCP.csproj --configuration Release
 
       - name: Publish
-        run: dotnet publish -c Release -o ./publish
+        run: dotnet publish ./PortfolioMCP/PortfolioMCP.csproj -c Release -o ./publish/mcp
 
       - name: Generate deployment package
         run: |

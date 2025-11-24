@@ -18,13 +18,13 @@ jobs:
           dotnet-version: '8.0.x' # Change to your .NET version
 
       - name: Restore dependencies
-        run: dotnet restore
+        run: dotnet restore ./PortfolioAPI/PortfolioAPI.csproj
 
       - name: Build
-        run: dotnet build --configuration Release
+        run: dotnet build ./PortfolioAPI/PortfolioAPI.csproj --configuration Release
 
       - name: Publish
-        run: dotnet publish -c Release -o ./publish
+        run: dotnet publish ./PortfolioAPI/PortfolioAPI.csproj -c Release -o ./publish/api
 
       - name: Generate deployment package
         run: |
