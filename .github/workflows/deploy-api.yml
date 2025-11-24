@@ -29,7 +29,7 @@ jobs:
       - name: Generate deployment package
         run: |
           cd publish/api
-          zip -r ../deployment-package.zip *
+          zip -r ../../deployment-package-api.zip *
           cd ..
 
       - name: Deploy to Elastic Beanstalk
