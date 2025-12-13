@@ -2,6 +2,7 @@ using Azure;
 using Azure.AI.OpenAI;
 using Azure.Identity;
 using Microsoft.Extensions.AI;
+using PortfolioAPI.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 var config = builder.Configuration;
@@ -10,7 +11,9 @@ var azureAiKey = config["AzureAI:Key"] ?? "";
 var allowedOrigin = config["AllowedOrigin"] ?? "";
 
 // Add services to the container.
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+builder.Services.AddScoped<IMcpService, McpService>();
+builder.Services.AddScoped<IChatService, ChatService>();
+
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddControllers();

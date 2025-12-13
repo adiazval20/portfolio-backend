@@ -3,6 +3,7 @@ using System.Text;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.AI;
 using ModelContextProtocol.Client;
+using PortfolioAPI.Services;
 
 namespace PortfolioAPI.Controllers;
 
@@ -11,56 +12,27 @@ namespace PortfolioAPI.Controllers;
 public class ChatController
 {
     private readonly ILogger<ChatController> _logger;
-    private readonly IChatClient _chatClient;
+    private readonly IChatService _chatService;
+    private readonly IMcpService _mcpService;
 
-    private readonly string _endPoint = "https://localhost:7263/sse";
-
-    public ChatController(IConfiguration config, ILogger<ChatController> logger, IChatClient chatClient)
+    public ChatController(ILogger<ChatController> logger, IChatService chatService, IMcpService mcpService)
     {
-        _endPoint = config["McpEndpoint"] ?? throw new Exception("The MCP Endpoint shouldn't be null");
         _logger = logger;
-        _chatClient = chatClient;
+        _chatService = chatService;
+        _mcpService = mcpService;
     }
 
     [HttpPost(Name = "Chat")]
     public async Task<string> Chat([FromBody] string message)
     {
-        var mcpClient = await GetMcpClient();
-
-        var tools = await mcpClient.ListToolsAsync();
-        var messages = new List<ChatMessage>
-        {
-            new(ChatRole.User, message)
-        };
-
-        List<ChatResponseUpdate> updates = [];
-        StringBuilder result = new StringBuilder();
-
-        await foreach (var update in _chatClient.GetStreamingResponseAsync(messages, new() { Tools = [.. tools] }))
-        {
-            result.Append(update);
-            updates.Add(update);
-        }
-
-        messages.AddMessages(updates);
-        return result.ToString();
+        var response = await _chatService.Chat(message);
+        return response;
     }
 
     [HttpGet("tools")]
     public async Task<JsonResult> GetTools()
     {
-        var mcpClient = await GetMcpClient();
-        var tools = await mcpClient.ListToolsAsync();
+        var tools = await _mcpService.GetTools();
         return new JsonResult(tools);
-    } 
-    
-    private async Task<IMcpClient> GetMcpClient() {
-        var options = new SseClientTransportOptions
-        {
-            Endpoint = new Uri(_endPoint)
-        };
-        var transport = new SseClientTransport(options);
-        var mcpClient = await McpClientFactory.CreateAsync(transport);
-        return mcpClient;
     }
 }

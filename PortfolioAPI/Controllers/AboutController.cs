@@ -12,7 +12,7 @@ public class AboutController : ControllerBase
 
     public AboutController(IConfiguration config)
     {
-        _parameterForTest = config["AllowedOrigin"] ?? "WTF";
+        _parameterForTest = config["AllowedOrigin"] ?? "?";
     }
 
     [HttpGet("")]
